@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Grid,
-  TextField,
   InputAdornment,
   InputLabel,
   FormControl,
@@ -39,7 +38,7 @@ const CalculatePage = ({ displayLanguageFlag }: calculatePorps) => {
       result: 0,
     },
     validationSchema: validationSchema,
-    onSubmit: (values) => {},
+    onSubmit: () => {},
   });
 
   React.useEffect(() => {
@@ -47,6 +46,7 @@ const CalculatePage = ({ displayLanguageFlag }: calculatePorps) => {
       amount: formik.values.amount,
       result: formik.values.amount * 10 * displayLanguageFlag?.rate,
     });
+   // eslint-disable-next-line
   }, [formik.values.amount, displayLanguageFlag?.rate]);
   return (
     <Grid container maxWidth={"sm"}>

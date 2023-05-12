@@ -10,7 +10,7 @@ interface LanguageType {
   value: string;
   label: string;
   icon: string;
-rate:number
+  rate: number;
 }
 type NavbarProps = {
   setOpenSideBar: (isOpen: boolean) => void;
@@ -28,8 +28,8 @@ const Navbar = ({
   const breakPoint = useMediaQuery("(max-width:1220px)");
   React.useEffect(() => {
     breakPoint === true ? setOpenSideBar(true) : setOpenSideBar(false);
-    // @typescript-eslint/no-unused-expressions
-  }, [breakPoint]);
+    // eslint-disable-next-line
+  }, [breakPoint]); // @typescript-eslint/no-unused-expressions
   return (
     <Box
       sx={{

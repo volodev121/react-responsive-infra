@@ -3,22 +3,12 @@ import {
   Box,
   MenuList,
   MenuItem,
-  Popper,
-  Grow,
-  Paper,
-  ClickAwayListener,
-  Button,
   Accordion,
   AccordionSummary,
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const styles = {
-  menu: {
-    width: 200, // set your desired width here
-  },
-};
 interface LanguageType {
   value: string;
   label: string;
@@ -50,6 +40,7 @@ export default function SidebarLanguage({
   React.useEffect(() => {
     const selected = LANGS.filter((lang) => lang.value === language);
     setDisplayLanguageFlag(selected[0]);
+    // eslint-disable-next-line
   }, [language]);
   return (
     <>

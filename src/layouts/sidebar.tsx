@@ -1,8 +1,7 @@
-import * as React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Drawer from "@mui/material/Drawer";
-import { Accordion, Divider, IconButton, Box } from "@mui/material";
+import { Divider, IconButton, Box } from "@mui/material";
 import { Close as IconClose } from "@mui/icons-material";
 import SidebarLanguage from "./SidebarLanguage";
 
@@ -11,7 +10,7 @@ interface LanguageType {
   value: string;
   label: string;
   icon: string;
-rate:number
+  rate: number;
 }
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
@@ -58,8 +57,6 @@ const SideBar = ({
   displayLanguageFlag,
   LANGS,
 }: SideBarProps) => {
-  const theme = useTheme();
-
   const handleDrawerClose = () => {
     setOpenSideBar(false);
   };

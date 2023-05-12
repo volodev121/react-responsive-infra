@@ -10,18 +10,13 @@ import {
   Button,
 } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
 interface LanguageType {
   value: string;
   label: string;
   icon: string;
-rate:number
+  rate: number;
 }
-
-const styles = {
-  menu: {
-    width: 200, // set your desired width here
-  },
-};
 
 type navbarLanguageProps = {
   setDisplayLanguageFlag: any;
@@ -79,6 +74,7 @@ export default function NavbarLanguage({
   React.useEffect(() => {
     const selected = LANGS.filter((lang) => lang.value === language);
     setDisplayLanguageFlag(selected[0]);
+    // eslint-disable-next-line
   }, [language]);
   return (
     <>
