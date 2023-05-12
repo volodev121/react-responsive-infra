@@ -1,0 +1,107 @@
+body {
+  font-family: "Gilroy", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar-link {
+  margin-left: 32px;
+  color: #fafafa;
+}
+.navbar-link:active {
+  color: #e9b109;
+}
+.navbar-link:hover {
+  color: #ae8507;
+}
+
+.navbar-link {
+  position: relative;
+}
+
+.navbar-link::before,
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px !important;
+  height: 1.5px;
+  background-color: #e9b109;
+  width: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-link::before {
+  left: 0;
+  bottom: 0;
+}
+
+.navbar-link::after {
+  left: 0;
+  bottom: 0;
+}
+
+.navbar-link:hover::before,
+.navbar-link:hover::after,
+.navbar-link:active::before,
+.navbar-link:active::after {
+  width: 24px;
+  right: 0;
+}
+
+.navbar-signup-btn {
+  color: #fafafa;
+  padding-right: 20px;
+  padding-left: 36px;
+  font-weight: 500;
+}
+.navbar-login-btn {
+  color: #142241;
+  font-weight: 500;
+  padding: 8px 24px;
+  background-color: #e9b109;
+  border-radius: 4px;
+}
+.navbar-login-btn:active {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0.35)
+    ),
+    #e9b109;
+}
+.navbar-login-btn:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.35),
+      rgba(255, 255, 255, 0.35)
+    ),
+    #e9b109;
+}
+.sidebar-link {
+  color: #fafafa;
+}
+.sidebar-link:hover {
+  color: #ae8507;
+}
+.sidebar-link:active {
+  color: #e9b109;
+}
+
+.css-18y3dva-MuiButtonBase-root-MuiAccordionSummary-root {
+  padding: 0 !important;
+}
+.css-15v22id-MuiAccordionDetails-root {
+  padding: 0 !important;
+}
+.css-o4b71y-MuiAccordionSummary-content {
+  margin: 0px !important;
+}
+.css-1tdm7x8-MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded {
+  min-height: 17.6px !important;
+}
